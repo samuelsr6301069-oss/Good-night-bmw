@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Good Night 🌙</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(180deg, #0b0f2e, #000);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .card {
+      text-align: center;
+      padding: 30px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      max-width: 320px;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 15px;
+      opacity: 0;
+      transition: opacity 2s ease;
+    }
+
+    .heart-btn {
+      margin-top: 20px;
+      font-size: 20px;
+      padding: 12px 25px;
+      border-radius: 30px;
+      border: none;
+      background: #ff6fae;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(255, 111, 174, 0.6);
+    }
+
+    .heart-btn:hover {
+      transform: scale(1.05);
+    }
+
+    iframe {
+      display: none;
+      margin-top: 20px;
+      border-radius: 12px;
+    }
+
+    .stars::after {
+      content: "✨ ✨ ✨";
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0.3;
+      font-size: 24px;
+      animation: float 4s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0% { transform: translate(-50%, 0); }
+      50% { transform: translate(-50%, -10px); }
+      100% { transform: translate(-50%, 0); }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="stars"></div>
+
+  <div class="card">
+    <h1 id="msg">Good night, my BMW, cutie girl 💙</h1>
+
+    <button class="heart-btn" onclick="startMagic()">
+      💖 Tap for Magic
+    </button>
+
+    <!-- YouTube embed: Perfect -->
+    <iframe id="music"
+      width="250"
+      height="140"
+      src="https://www.youtube.com/embed/2Vv-BfVoq4g?autoplay=1"
+      allow="autoplay">
+    </iframe>
+  </div>
+
+  <script>
+    function startMagic() {
+      document.getElementById("msg").style.opacity = "1";
+      document.getElementById("music").style.display = "block";
+    }
+  </script>
+</body>
+</html>
